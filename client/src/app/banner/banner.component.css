@@ -1,0 +1,37 @@
+.section {
+    padding: 100px;
+}
+
+.textBx {
+    text-shadow: 2px 2px 5px #706c61;
+}
+
+.banner {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner h1 {
+    color: #FFF;
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.textBx text {
+    /* transform: translateY(100%); */
+    display: inline-block;
+}
+
+.banner h1 span {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.banner h2 {
+    font-size: 1.5em;
+    color: #FFF;
+    font-weight: 500;
+}
