@@ -1,25 +1,19 @@
 const express = require('express');
-const app = express(),
-    bodyParser = require("body-parser");
+const bodyParser = require('body-parser')
+var router = require('./router')
+const cors = require('cors');
+
+const app = express()
 port = 3080;
+app.use(cors());
+app.options('*', cors());
 
-const users = [];
-
+// Body Parser Middleware
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/api/users', (req, res) => {
-    res.json(users);
-});
 
-app.post('/api/user', (req, res) => {
-    const user = req.body.user;
-    users.push(user);
-    res.json("user addedd");
-});
-
-app.get('/', (req, res) => {
-    res.send('App Works !!!!');
-});
+app.use(router)
 
 app.listen(port, () => {
     console.log(`Server listening on the port::${port}`);
