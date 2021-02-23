@@ -19,4 +19,13 @@
     <div *ngIf="!messages">
         Il n'y a pas de message...
     </div>
+    <p>New message :</p>
+    <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Title" (keyup)="getNewTitle($event)">
+    </div>
+    <div class="mb-3">
+        <textarea class="form-control" rows="3" placeholder="Message" (keyup)="getNewContent($event)"></textarea>
+    </div>
+    <button type="button" class="btn btn-info" (click)="sendNewMsg()">Envoyer</button>
+
 </div>

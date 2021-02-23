@@ -20,6 +20,8 @@ export class MessageComponent implements OnInit {
   public messages: any;
 
   constructor(private messageService: MessageService) { }
+  newTitle = '';
+  newContent = '';
 
   ngOnInit(): void {
     this.getMessages();
@@ -33,6 +35,23 @@ export class MessageComponent implements OnInit {
         this.messages = data;
       },
       error => {
+        console.log(error);
+      }
+    );
+  }
+
+  getNewTitle(event): void{
+    this.newTitle = event.target.value;
+  }
+  getNewContent(event): void{
+    this.newContent = event.target.value;
+  }
+  sendNewMsg(): void{
+    this.messageService.addNewMessage(this.newTitle, this.newContent)
+    .subscribe(
+      ret => {
+        this.ngOnInit();
+      }, error => {
         console.log(error);
       }
     );
