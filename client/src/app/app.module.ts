@@ -11,6 +11,7 @@ import { MessageComponent } from './message/message.component';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FooterComponent } from './footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FooterComponent } from './footer/footer.component';
       {path: '', component: AppComponent, pathMatch: 'full'},
       {path: '404', component: NotFoundComponent},
       {path: '**', redirectTo: '/404'}
-  ])
+  ]),
+    FontAwesomeModule
   ],
   providers: [
     MailService,

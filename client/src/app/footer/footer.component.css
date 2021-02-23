@@ -16,7 +16,7 @@ footer {
 }
 
 img {
-    width: 7rem;
+    width: 3rem;
 }
 
 footer a {
@@ -29,11 +29,6 @@ footer a {
 }
 
 .icon-social {
-    font-size: 3vw;
-    /* margin-left: 0.2rem;
-  margin-right: 0.2rem;
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem; */
     transition: .2s;
     padding: 0;
 }
