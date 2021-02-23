@@ -9,17 +9,19 @@ router.get('/api/messages', async(req, res) => {
     console.log("api/messages" + (count++));
 
     try {
-        const comments = await Comment.find({}).lean().exec(function(err, comments) {
-            comments.forEach(c => {
+        const messages = await Comment.find({}).lean().exec(function(err, messages) {
+            messages.forEach(c => {
                 c.timeDiff = timeDiff.calculTime(new Date(), c.creatTime)
             });
-            res.send(comments)
+            console.log("get messages : ", messages);
+            res.send(messages)
         })
     } catch (err) {
         res.status(400).send(err)
     }
 })
 router.post('/api/newMessage', function(req, res) {
+        console.log(">>>> ", req.body);
         new Comment(req.body).save()
             .then(function(data) {
                 res.send('ok')
