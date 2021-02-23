@@ -6,24 +6,38 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-  private prevScrollpos: number;
+  private prevScrollpos: number = window.pageYOffset;
+  isHidden = false;
+  fontColor = '#fafafa';
+  backgroundColor = 'transparent';
 
   constructor() { }
 
   ngOnInit(): void {
-    this.prevScrollpos = window.pageYOffset;
+    this.setIsHiddenNavBar();
+    this.setFontColor();
+    this.setBackgroundColor();
   }
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event): void {
-    // color navbar
-    const navbar: HTMLElement = document.querySelector('.navbar');
-    navbar.classList.toggle('is-not-transparent', window.scrollY > 100);
-    // if hidden navbar
 
-    navbar.classList.toggle('is-hidden', this.prevScrollpos < window.pageYOffset && window.scrollY > 100);
+    this.setIsHiddenNavBar();
+    this.setFontColor();
+    this.setBackgroundColor();
+  }
+
+  private setFontColor(): void{
+    this.fontColor = window.pageYOffset > 100 ? '#333333' : '#fafafa';
+  }
+
+  private setIsHiddenNavBar(): void{
+    this.isHidden = this.prevScrollpos <= window.pageYOffset && window.scrollY > 100;
     this.prevScrollpos = window.pageYOffset;
+  }
 
+  private setBackgroundColor(): void {
+    this.backgroundColor =  window.scrollY > 100 ? '#fafafa' : 'transparent';
   }
 
 }
