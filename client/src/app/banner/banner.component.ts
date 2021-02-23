@@ -9,26 +9,26 @@ export class BannerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.setBannerBackground();
+    /* this.setBannerBackground(); */
   }
 
-  @HostListener('window:resize', ['$event'])
+  /* @HostListener('window:resize', ['$event'])
   onResize(event): void {
     this.setBannerBackground();
-  }
+  } */
 
 
-  @HostListener('window:scroll', ['$event'])
+  /* @HostListener('window:scroll', ['$event'])
   onScroll(event): void {
     const banner: HTMLElement = document.getElementById('banner');
     banner.style.backgroundSize = 150 - +window.pageYOffset / 15 + '%';
     banner.style.opacity = 1 - +window.pageYOffset / 700 + '';
-  }
+  } */
 
   /**
    * setBannerBackground
    */
-  public setBannerBackground(): void {
+  /* public setBannerBackground(): void {
     const banner: HTMLElement = document.getElementById('banner');
     banner.style.background = this.setBannerImg();
     banner.style.backgroundSize = '150% contain';
@@ -52,6 +52,6 @@ export class BannerComponent implements OnInit {
     }else {
       return 'url(\'/assets/image/banner/background_5.jpg\')';
     }
-  }
+  } */
 
 }
