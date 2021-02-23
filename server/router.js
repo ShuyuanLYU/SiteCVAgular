@@ -13,7 +13,6 @@ router.get('/api/messages', async(req, res) => {
             messages.forEach(c => {
                 c.timeDiff = timeDiff.calculTime(new Date(), c.creatTime)
             });
-            console.log("get messages : ", messages);
             res.send(messages)
         })
     } catch (err) {
@@ -21,7 +20,6 @@ router.get('/api/messages', async(req, res) => {
     }
 })
 router.post('/api/newMessage', function(req, res) {
-        console.log(">>>> ", req.body);
         new Comment(req.body).save()
             .then(function(data) {
                 res.send('ok')
