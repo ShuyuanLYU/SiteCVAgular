@@ -11,6 +11,7 @@ import { MessageComponent } from './message/message.component';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FooterComponent } from './footer/footer.component';
+import { ArchitectureComponent } from './architecture/architecture.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     NavBarComponent,
     MessageComponent,
     NotFoundComponent,
-    FooterComponent
+    FooterComponent,
+    ArchitectureComponent
   ],
   imports: [
     BrowserModule,
