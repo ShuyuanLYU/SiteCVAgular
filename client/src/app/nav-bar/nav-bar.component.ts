@@ -2,24 +2,24 @@ import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+  templateUrl: './nav-bar.component.html'/* ,
+  styleUrls: ['./nav-bar.component.css'] */
 })
 export class NavBarComponent implements OnInit {
-  private prevScrollpos: number = window.pageYOffset;
+  /* private prevScrollpos: number = window.pageYOffset;
   isHidden = false;
   fontColor = '#fafafa';
-  backgroundColor = 'transparent';
+  backgroundColor = 'transparent'; */
 
   constructor() { }
 
   ngOnInit(): void {
-    this.setIsHiddenNavBar();
+    /* this.setIsHiddenNavBar();
     this.setFontColor();
-    this.setBackgroundColor();
+    this.setBackgroundColor(); */
   }
 
-  @HostListener('window:scroll', ['$event'])
+  /* @HostListener('window:scroll', ['$event'])
   onScroll(event): void {
 
     this.setIsHiddenNavBar();
@@ -38,6 +38,6 @@ export class NavBarComponent implements OnInit {
 
   private setBackgroundColor(): void {
     this.backgroundColor =  window.scrollY > 100 ? '#fafafa' : 'transparent';
-  }
+  } */
 
 }
