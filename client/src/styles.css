@@ -4,3 +4,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+.fontTitle {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 54px;
+    color: #433d3c;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.fontText {
+    font-family: 'Open Sans', sans-serif;
+}
