@@ -1,4 +1,5 @@
-<h1>Messgerie</h1>
+<h1 class="fontTitle mt-5 mb-5">Messgerie</h1>
+<app-new-message></app-new-message>
 <div class="list-group mt-3 container">
     <div *ngIf="messages">
         <li *ngFor="let message of messages" class="list-group-item mb-1">
@@ -8,10 +9,10 @@
             </div>
             <div class="d-flex w-100 justify-content-between">
                 <p class="mb-1"> {{message.message}} </p>
-                <div>
+                <!--  <div>
                     <a class="btn btn-outline-primary btn-sm" href="/messages/edit?_id={{_id}}">1<i class="far fa-edit"></i></a>
                     <a class="btn btn-outline-primary btn-sm" href="/messages/delete?_id={{_id}}">2<i class="far fa-trash-alt"></i></a>
-                </div>
+                </div> -->
 
             </div>
         </li>
@@ -19,13 +20,5 @@
     <div *ngIf="!messages">
         Il n'y a pas de message...
     </div>
-    <p>New message :</p>
-    <div class="mb-3">
-        <input type="text" class="form-control" placeholder="Title" (keyup)="getNewTitle($event)">
-    </div>
-    <div class="mb-3">
-        <textarea class="form-control" rows="3" placeholder="Message" (keyup)="getNewContent($event)"></textarea>
-    </div>
-    <button type="button" class="btn btn-info" (click)="sendNewMsg()">Envoyer</button>
 
 </div>

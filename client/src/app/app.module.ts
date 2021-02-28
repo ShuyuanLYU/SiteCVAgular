@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BannerComponent } from './banner/banner.component';
@@ -15,11 +15,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { FooterComponent } from './footer/footer.component';
 import { ArchitectureComponent } from './architecture/architecture.component';
 import { HomeComponent } from './home/home.component';
+import { NewMessageComponent } from './new-message/new-message.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'architecteur', component: ArchitectureComponent},
-  {path: '404', component: NotFoundComponent},
+  {path: 'message', component: MessageComponent},
   {path: '**', redirectTo: '/404'}
 ];
 @NgModule({
@@ -32,11 +33,14 @@ const appRoutes: Routes = [
     NotFoundComponent,
     FooterComponent,
     ArchitectureComponent,
-    HomeComponent
+    HomeComponent,
+    NewMessageComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [

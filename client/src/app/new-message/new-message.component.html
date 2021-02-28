@@ -1,0 +1,19 @@
+<div class="container">
+    <!-- <form [formGroup]="newMessageForm" (ngSubmit)="onSubmit()">
+        <label>Nouveau message:</label>
+
+        <input type="text" class="form-control mb-3" placeholder="Title du message" formControlName="title">
+
+        <textarea class="form-control mb-3" rows="3" placeholder="Contenu du message" formControlName="message"></textarea>
+
+        <input type="submit" class="btn btn-primary mb-3" value="Envoyer">
+    </form> -->
+    <p>New message :</p>
+    <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Title" (keyup)="getNewTitle($event)">
+    </div>
+    <div class="mb-3">
+        <textarea class="form-control" rows="3" placeholder="Message" (keyup)="getNewContent($event)"></textarea>
+    </div>
+    <button type="button" class="btn btn-info" (click)="sendNewMsg()">Envoyer</button>
+</div>

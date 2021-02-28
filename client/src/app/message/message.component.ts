@@ -8,20 +8,11 @@ import { MessageService } from '../services/message.service';
   styleUrls: ['./message.component.css']
 })
 export class MessageComponent implements OnInit {
-  /* message: Message = {
-    _id: 123,
-    title: 'faut msg',
-    message: 'yolo',
-    creatTime: new Date(),
-    editTime: new Date(),
-    timeDiff: 'il y a yolo',
-    like: 0
-  }; */
+
   public messages: any;
 
   constructor(private messageService: MessageService) { }
-  newTitle = '';
-  newContent = '';
+
 
   ngOnInit(): void {
     this.getMessages();
@@ -40,21 +31,6 @@ export class MessageComponent implements OnInit {
     );
   }
 
-  getNewTitle(event): void{
-    this.newTitle = event.target.value;
-  }
-  getNewContent(event): void{
-    this.newContent = event.target.value;
-  }
-  sendNewMsg(): void{
-    this.messageService.addNewMessage(this.newTitle, this.newContent)
-    .subscribe(
-      ret => {
-        this.ngOnInit();
-      }, error => {
-        console.log(error);
-      }
-    );
-  }
+
 
 }
