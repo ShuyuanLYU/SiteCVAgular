@@ -135,3 +135,19 @@ use express to start angular(with pm2)
 ```console
 pm2 start startClient.js
 ```
+# Configure domain DNS records on Linode
+## Côte Linode
+Domain -> Add a Domain :
+
+- **Domain**: exemple.com
+- **SOA Email Address**: your@email.com
+- **Insert Defalt Records**: Insert default records from one of my Linodes. (and choose your linode)
+- 
+Choose **Add a Domaine**
+
+So in the part of **NS Record**, we have **Name Servers** as `ns1/2/3/4/5.linode.com` and subdomain as `exemple.com`
+## Côte Godaddy (part of Domain)
+DNS Manager -> Nameservers : 
+Change 'Using default nameservers' to `custom` and enter the 5 `ns1/2/3/4/5.linode.com` into list of **Nameserver**
+
+Done.
