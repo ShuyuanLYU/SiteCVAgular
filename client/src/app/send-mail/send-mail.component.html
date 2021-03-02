@@ -2,15 +2,15 @@
 
     <h1 class="fontTitle mt-4">Contact</h1>
 
-    <div *ngIf="isSend; else elseBlock">
+    <div *ngIf="isSend">
         <div class="alert alert-success mt-5" role="alert">
-            <h4 class="alert-heading">Votre message est bien envoyé !</h4>
+            <h5 class="alert-heading">Votre message est bien envoyé !</h5>
             <p>Je vous remercie de votre message. Vous recevrez également une copier dans votre email.</p>
             <hr>
-            <p class="mb-0">Si vous voulez revenir sue page d'accueil, veuillez <a href="/" class="alert-link">cliquer ici</a>.</p>
+            <p>Si vous voulez revenir sue page d'accueil, veuillez <a href="/" class="alert-link">cliquer ici</a>.</p>
         </div>
     </div>
-    <ng-template #elseBlock>
+    
         <form class="form-group mt-3" [formGroup]="mailForm" (ngSubmit)="onSubmit()">
             <label>E-mail : <span class="red">*</span></label>
             <input class="form-control" type="mail" formControlName="mail">
@@ -32,5 +32,5 @@
                 <button type="submit" class="btn btn-outline-secondary">Envoyer</button>
             </div>
         </form>
-    </ng-template>
+    
 </div>

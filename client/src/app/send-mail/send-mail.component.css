@@ -10,3 +10,10 @@ button {
     float: right;
     color: #a6a6a4;
 }
+hr{
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+p{
+    margin-bottom: 0;
+}

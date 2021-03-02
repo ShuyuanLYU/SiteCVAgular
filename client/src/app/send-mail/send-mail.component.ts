@@ -15,7 +15,7 @@ export class SendMailComponent implements OnInit {
   ERROR_MAIL = 'Votre addresse mail n\'est pas correct, veuillez vous le corriger.';
   ERROR_OBJET = 'Votre objet n\'est pas correct, veuillez vous le corriger.';
   ERROR_MESSAGE = 'Votre contenu de mail n\'est pas correct, veuillez vous le corriger. (Le numbre de caractère devrait entre 10 et 1000)';
-
+  ERROR_SEND = 'Ops ! Votre message n\'est pas résussit à envoyer, ressyez plus tard s\'il vous plaît ! Merci !';
 
   text = '';
   error = '';
@@ -40,11 +40,10 @@ export class SendMailComponent implements OnInit {
       this.mailService.sendMail(this.mailForm.value)
       .subscribe(
         ret => {
-          console.log('111111111111');
           this.isSend = true;
+          this.mailForm.reset();
         }, err => {
-          console.log('2222222222222');
-          alert('Ops ! Votre message n\'est pas résussit à envoyer, ressyez plus tard s\'il vous plaît ! Merci !');
+          this.error = this.ERROR_SEND;
           console.log(err);
         }
       );
