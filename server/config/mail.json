@@ -1,0 +1,11 @@
+{
+    "host": "smtp.gmail.com",
+    "port": 587,
+    "secure": false,
+    "user": "shuyuansite@gmail.com",
+    "pass": "15900dou:dou",
+    "from": "\"Site de Shuyuan\" <shuyuansite@gmail.com>",
+    "to": "lyushuyuan@gmail.com",
+    "titleToDestinator": "[Site de Shuyuan] Nouveau message reçu CONTACT",
+    "titleToSender": "[Site de Shuyuan] Merci pour votre message"
+}

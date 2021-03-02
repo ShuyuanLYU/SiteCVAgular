@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Message } from '../app.message';
+import { Message } from '../model/app.message';
 import { Observable } from 'rxjs';
 
 //const baseUrl = 'http://139.162.199.44:3080/api';
@@ -18,7 +18,7 @@ export class MessageService {
   }
 
   addNewMessage(title: string, content: string): any {
-    return this.http.post(`${baseUrl}/newMessage`, {title, message: content});
+    return this.http.post(`${baseUrl}/newMessage`, {title, message: content}, {responseType: 'text'});;
   }
 
 }

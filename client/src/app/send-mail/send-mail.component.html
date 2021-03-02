@@ -1,0 +1,36 @@
+<div class="container">
+
+    <h1 class="fontTitle mt-4">Contact</h1>
+
+    <div *ngIf="isSend; else elseBlock">
+        <div class="alert alert-success mt-5" role="alert">
+            <h4 class="alert-heading">Votre message est bien envoyé !</h4>
+            <p>Je vous remercie de votre message. Vous recevrez également une copier dans votre email.</p>
+            <hr>
+            <p class="mb-0">Si vous voulez revenir sue page d'accueil, veuillez <a href="/" class="alert-link">cliquer ici</a>.</p>
+        </div>
+    </div>
+    <ng-template #elseBlock>
+        <form class="form-group mt-3" [formGroup]="mailForm" (ngSubmit)="onSubmit()">
+            <label>E-mail : <span class="red">*</span></label>
+            <input class="form-control" type="mail" formControlName="mail">
+            <small class="form-text text-muted mb-4">Je ne partage jamais vos informations personnelles.</small>
+
+            <label>Objet : <span class="red">*</span></label>
+            <input class="form-control mb-4" type="text" formControlName="objet">
+
+            <label>Message : <span class="red">*</span></label>
+            <label class="countNumlber"><span [class.red]="text.length > 1000" >{{1000 - text.length}}</span> / 1000</label>
+            <textarea class="form-control mb-3" rows="5" formControlName="message" [(ngModel)]="text"></textarea>
+            <small class="text-muted"><span class="red">*</span> Champs obligatoires</small>
+            <div class="mb-4">
+                <div *ngIf="error">
+                    <div class="alert alert-danger mt-2" role="alert">
+                        {{error}}
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-outline-secondary">Envoyer</button>
+            </div>
+        </form>
+    </ng-template>
+</div>

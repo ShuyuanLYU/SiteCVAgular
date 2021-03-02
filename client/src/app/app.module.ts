@@ -16,11 +16,14 @@ import { FooterComponent } from './footer/footer.component';
 import { ArchitectureComponent } from './architecture/architecture.component';
 import { HomeComponent } from './home/home.component';
 import { NewMessageComponent } from './new-message/new-message.component';
+import { SendMailComponent } from './send-mail/send-mail.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'architecteur', component: ArchitectureComponent},
   {path: 'message', component: MessageComponent},
+  {path: 'sendMail', component: SendMailComponent},
+
   {path: '**', redirectTo: '/404'}
 ];
 @NgModule({
@@ -34,7 +37,8 @@ const appRoutes: Routes = [
     FooterComponent,
     ArchitectureComponent,
     HomeComponent,
-    NewMessageComponent
+    NewMessageComponent,
+    SendMailComponent
   ],
   imports: [
     BrowserModule,

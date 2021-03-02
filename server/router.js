@@ -3,8 +3,24 @@ var router = express.Router()
 var db = require('./database')
 var Comment = require('./Model/Comment')
 var timeDiff = require('./js/timeDiff')
+const mailSender = require('./js/sendMail')
 var count = 0
 
+router.post('/api/sendMail', function(req, res) {
+
+    mailSender.sendMail(req.body.mail, req.body.objet, req.body.message, false)
+        .then(function(data) {
+            return mailSender.sendMail(req.body.mail, req.body.objet, req.body.message, true)
+        }, function(err) {
+            res.status(501).send(err)
+        })
+        .then(function(data) {
+            res.send('ok')
+        }, function(err) {
+            res.status(501).send(err)
+        })
+
+})
 router.get('/api/messages', async(req, res) => {
     console.log("api/messages" + (count++));
 
@@ -13,13 +29,14 @@ router.get('/api/messages', async(req, res) => {
             messages.forEach(c => {
                 c.timeDiff = timeDiff.calculTime(new Date(), c.creatTime)
             });
-            res.send(messages)
+            res.send(messages.reverse())
         })
     } catch (err) {
         res.status(400).send(err)
     }
 })
 router.post('/api/newMessage', function(req, res) {
+        console.log(req.body);
         new Comment(req.body).save()
             .then(function(data) {
                 res.send('ok')
