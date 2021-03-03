@@ -17,6 +17,7 @@ import { ArchitectureComponent } from './architecture/architecture.component';
 import { HomeComponent } from './home/home.component';
 import { NewMessageComponent } from './new-message/new-message.component';
 import { SendMailComponent } from './send-mail/send-mail.component';
+import { FormationComponent } from './formation/formation.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
     ArchitectureComponent,
     HomeComponent,
     NewMessageComponent,
-    SendMailComponent
+    SendMailComponent,
+    FormationComponent
   ],
   imports: [
     BrowserModule,
