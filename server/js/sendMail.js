@@ -21,7 +21,7 @@ function outputToSender(mail, objet, message) {
           <p>Bonjour,</p>
           <p>J'ai bien reçu votre message ${getTime.getLocaleTimeString()} et vous en remercie. Vous recoit un copier dans ce email.</p>
           <p><strong>Objet: </strong>${objet}</p>
-          <p><strong>Message: </strong>$${message}</p>
+          <p><strong>Message: </strong>${message}</p>
           <p>Cordialement,</p>
           <p>Site de Shuyuan</p>
           `;
@@ -73,6 +73,8 @@ function getTransporter() {
 }
 
 exports.sendMail = function(mail, objet, message, isToSender) {
+    console.log('message : ', message);
+
         return new Promise(function(resolve, reject) {
             let transporter = getTransporter();
             let mailOptions = isToSender ? mailOptionsToSender(mail, objet, message) : mailOptionsToDestinator(mail, objet, message);
