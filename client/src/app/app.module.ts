@@ -18,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { NewMessageComponent } from './new-message/new-message.component';
 import { SendMailComponent } from './send-mail/send-mail.component';
 import { FormationComponent } from './formation/formation.component';
+import { ProfessionalExperienceComponent } from './professional-experience/professional-experience.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -40,7 +41,8 @@ const appRoutes: Routes = [
     HomeComponent,
     NewMessageComponent,
     SendMailComponent,
-    FormationComponent
+    FormationComponent,
+    ProfessionalExperienceComponent
   ],
   imports: [
     BrowserModule,

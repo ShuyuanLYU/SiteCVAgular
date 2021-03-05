@@ -1,0 +1,32 @@
+<div class="container">
+    <h1 class="fontTitle">Expériences professionelles <br> & projets réalisés</h1>
+    <div class="experience">
+        <!-- <h2>Alternence Master 2</h2> -->
+        <h4>12/2019 - 09/2020 : Alternance - Informatique décisionnelle (BI) - GEODIS RT</h4>
+        <p>12/2019 - 03/2020 : 2 semaines en université / 2 semaines en entreprise</p>
+        <p>03/2020 - 09/2020 : temps plein en entreprise</p>
+        <p>Mission : La <strong>modélisation</strong> et l'<strong>intégration</strong> de données avec des règles de gestion spécifiques (réalisation d’une base de données décisionnelle), puis la <strong>restitution</strong> les données dans les tableaux de bord, pour que le client (les chef de projet et les dirigeants de l'entreprise) puisse avoir une vue globale pour prendre une meilleur décison.</p>
+        <p>Logiciels, langages et techniques utilisés : Talend, Cognos, SQL, Java, ETL(processus classique de BI pour l'intégration des données)</p>
+        <div *ngIf="ifDisplayAlternanceM2">
+            Content to render when condition is false.
+            
+        </div>
+        <button class="btn btn-outline-secondary" (click)="displayAlternanceM2()">{{buttonDisplayAlternanceM2}}</button>
+    </div>
+    <div class="experience">
+        <h2>Stage Master 1</h2>
+        <div *ngIf="ifDisplayStageM1">
+            Content to render when condition is false.
+            
+        </div>
+        <button class="btn btn-outline-secondary" (click)="displayStageM1()">{{buttonDisplayStageM1}}</button>
+    </div>
+    <div class="experience">
+        <h2>Projet tutoré Master 1</h2>
+        <div *ngIf="ifDisplayProjetTuto">
+            Content to render when condition is false.
+            
+        </div>
+        <button class="btn btn-outline-secondary" (click)="displayProjetTuto()">{{buttonDisplayProjetTuto}}</button>
+    </div>
+</div>
