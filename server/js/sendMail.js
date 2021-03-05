@@ -19,7 +19,7 @@ function validator_contact(mail, objet, message) {
 function outputToSender(mail, objet, message) {
     return `
           <p>Bonjour,</p>
-          <p>J'ai bien reçu votre message ${getTime.getLocaleTimeString()} et vous en remercie. Vous recoit un copier dans ce email.</p>
+          <p>J'ai bien reçu votre message ${getTime.getLocaleTimeString()} et vous en remercie. Vous recevrez un copie dans ce email.</p>
           <p><strong>Objet: </strong>${objet}</p>
           <p><strong>Message: </strong>${message}</p>
           <p>Cordialement,</p>

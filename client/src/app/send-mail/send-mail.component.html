@@ -7,7 +7,7 @@
             <h5 class="alert-heading">Votre message est bien envoyé !</h5>
             <p>Je vous remercie de votre message. Vous recevrez également une copier dans votre email.</p>
             <hr>
-            <p>Si vous voulez revenir sue page d'accueil, veuillez <a href="/" class="alert-link">cliquer ici</a>.</p>
+            <p>Vous allez retourner vers la page d'accueil dans {{second}} seconds, ou <a href="/" class="alert-link">cliquer ici</a>.</p>
         </div>
     </div>
     
@@ -20,8 +20,8 @@
             <input class="form-control mb-4" type="text" formControlName="objet">
 
             <label>Message : <span class="red">*</span></label>
-            <label class="countNumlber"><span [class.red]="text.length > 1000" >{{1000 - text.length}}</span> / 1000</label>
-            <textarea class="form-control mb-3" rows="5" formControlName="message" [(ngModel)]="text"></textarea>
+            <label class="countNumlber"><span [class.red]="text.value.length > 1000" >{{1000 - text.value.length}}</span> / 1000</label>
+            <textarea class="form-control mb-3" rows="5" formControlName="message" #text></textarea>
             <small class="text-muted"><span class="red">*</span> Champs obligatoires</small>
             <div class="mb-4">
                 <div *ngIf="error">
@@ -29,7 +29,11 @@
                         {{error}}
                     </div>
                 </div>
-                <button type="submit" class="btn btn-outline-secondary">Envoyer</button>
+                <button type="submit" class="btn btn-outline-secondary" [disabled]="sending">
+                    <div *ngIf="sending; else elseBlock"><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        <span class="visually-hidden">Envoi en cours...</span></div>
+                    <ng-template #elseBlock>Envoyer</ng-template>                   
+                </button>
             </div>
         </form>
     

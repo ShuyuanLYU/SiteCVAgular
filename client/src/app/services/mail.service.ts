@@ -13,8 +13,6 @@ export class MailService {
   constructor(private http: HttpClient) { }
 
   sendMail(mail: Mail): any {
-    console.log(mail);
-
     return this.http.post(baseUrl, mail, {responseType: 'text'});
   }
 }
