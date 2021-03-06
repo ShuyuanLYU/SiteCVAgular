@@ -1,6 +1,12 @@
 button {
     float: right;
 }
-.experience{
+
+.experience {
     margin-top: 3rem;
+}
+
+.tech {
+    border: 1px solid #ccc;
+    border-radius: 15%;
 }
