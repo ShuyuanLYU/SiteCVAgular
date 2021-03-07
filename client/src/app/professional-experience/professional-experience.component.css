@@ -7,6 +7,16 @@ button {
 }
 
 .tech {
-    border: 1px solid #ccc;
-    border-radius: 15%;
+    border: 1px solid #cad1d9;
+    border-radius: 10px;
+    position: relative;
+    padding: 0 0.4rem;
+    margin: 0 0.2rem;
+    white-space: nowrap;
+}
+
+.techList {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    word-wrap: break-word;
 }

@@ -19,6 +19,9 @@ import { NewMessageComponent } from './new-message/new-message.component';
 import { SendMailComponent } from './send-mail/send-mail.component';
 import { FormationComponent } from './formation/formation.component';
 import { ProfessionalExperienceComponent } from './professional-experience/professional-experience.component';
+import { TimelineAlternanceM2Component } from './timeline-alternance-m2/timeline-alternance-m2.component';
+import { TimelineStageM1Component } from './timeline-stage-m1/timeline-stage-m1.component';
+import { TimelineProjetTutoreComponent } from './timeline-projet-tutore/timeline-projet-tutore.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -42,7 +45,10 @@ const appRoutes: Routes = [
     NewMessageComponent,
     SendMailComponent,
     FormationComponent,
-    ProfessionalExperienceComponent
+    ProfessionalExperienceComponent,
+    TimelineAlternanceM2Component,
+    TimelineStageM1Component,
+    TimelineProjetTutoreComponent
   ],
   imports: [
     BrowserModule,

@@ -2,34 +2,66 @@
     <h1 class="fontTitle">Expériences professionelles <br> & projets réalisés</h1>
     <div class="experience">
         <!-- <h2>Alternence Master 2</h2> -->
-        <h4>12/2019 - 09/2020 : Alternance - Informatique décisionnelle (BI) - GEODIS RT</h4>
-        <p>12/2019 - 03/2020 : 2 semaines en université / 2 semaines en entreprise
-            <br> 03/2020 - 09/2020 : temps plein en entreprise</p>
+        <h4>12/2019 - 09/2020<br>Alternance Master 2 - Informatique décisionnelle (BI) - GEODIS RT</h4>
+        <div class="techList">
+            <span class="tech">Talend</span>
+            <span class="tech">Cognos</span>
+            <span class="tech">DBVisualiser</span>
+            <span class="tech">DBDesigner</span>
+            <span class="tech">SQL</span>
+            <span class="tech">Java</span>
+            <span class="tech">ETL</span>
+        </div>
         <p>Mission : La <strong>modélisation</strong> et l'<strong>intégration</strong> de données avec des règles de gestion spécifiques (réalisation d’une base de données décisionnelle), puis la <strong>restitution</strong> les données dans les tableaux
             de bord, pour que le client (les chef de projet et les dirigeants de l'entreprise) puisse avoir une vue globale pour prendre une meilleur décison.</p>
-        <p>Logiciels / langages : <span class="tech">Talend</span>, Cognos, SQL, Java</p>
-        <p>techniques utilisés : ETL (processus classique de BI pour l'intégration des données)</p>
+
         <div *ngIf="ifDisplayAlternanceM2">
-            Content to render when condition is false.
+
+            <hr>
+            <p>12/2019 - 03/2020 : 2 semaines en université / 2 semaines en entreprise
+                <br> 03/2020 - 09/2020 : temps plein en entreprise</p>
+            <p>Missions : </p>
+            <app-timeline-alternance-m2></app-timeline-alternance-m2>
 
         </div>
-        <button class="btn btn-outline-secondary" (click)="displayAlternanceM2()">{{buttonDisplayAlternanceM2}}</button>
+        <button class="btn btn-outline-info btn-sm" (click)="displayAlternanceM2()">{{buttonDisplayAlternanceM2}}</button>
     </div>
     <div class="experience">
         <!-- <h2>Stage Master 1</h2> -->
-        <h4>05/2019 - 08/2020 : Stage - HuaYi Technologie</h4>
+        <h4>05/2019 - 08/2020<br>Stage Master 1 - HuaYi Technologie</h4>
+        <div class="techList">
+            <span class="tech">Node.js</span>
+            <span class="tech">HTML</span>
+            <span class="tech">CSS</span>
+            <span class="tech">Bootstrap</span>
+            <span class="tech">Javascript</span>
+            <span class="tech">Nginx</span>
+        </div>
+        <p>Conception et réalisation d’un site web pour présenter l’entreprise et ses produits. Puis déploiement sur serveur.</p>
+
         <div *ngIf="ifDisplayStageM1">
-            Content to render when condition is false.
+            <app-timeline-stage-m1></app-timeline-stage-m1>
 
         </div>
-        <button class="btn btn-outline-secondary" (click)="displayStageM1()">{{buttonDisplayStageM1}}</button>
+        <button class="btn btn-outline-info btn-sm" (click)="displayStageM1()">{{buttonDisplayStageM1}}</button>
     </div>
     <div class="experience">
-        <h2>Projet tutoré Master 1</h2>
+        <h4>09-2018 - 04/2019<br>Projet tutoré Master 1</h4>
+        <div class="techList">
+            <span class="tech">JavaScript</span>
+            <span class="tech">Node.js</span>
+            <span class="tech">Python</span>
+            <span class="tech">Tensorflow</span>
+            <span class="tech">Angular</span>
+            <span class="tech">GitLab</span>
+            <span class="tech">Méthode agile Scrum</span>
+            <span class="tech">Intellij IDEA</span>
+        </div>
+        <p>Réalisation d’un site Web pour gérer le transport de colis par des voyageurs.</p>
         <div *ngIf="ifDisplayProjetTuto">
-            Content to render when condition is false.
+            <app-timeline-projet-tutore></app-timeline-projet-tutore>
 
         </div>
-        <button class="btn btn-outline-secondary" (click)="displayProjetTuto()">{{buttonDisplayProjetTuto}}</button>
+        <button class="btn btn-outline-info btn-sm" (click)="displayProjetTuto()">{{buttonDisplayProjetTuto}}</button>
     </div>
 </div>

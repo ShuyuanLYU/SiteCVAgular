@@ -1,0 +1,104 @@
+.container {
+    color: #1b262c;
+    height: 100%;
+    text-align: justify;
+}
+
+.circle {
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 50%;
+    background-color: #3282b8;
+    color: #fff;
+    max-height: 3rem;
+    z-index: 2;
+    font-family: 'Kaushan Script', cursive;
+}
+
+
+/* .mission.row {
+    display: flex;
+} */
+
+.mission.row .col-2 {
+    display: inline-flex;
+    /* align-self: stretch; */
+    align-items: center;
+    justify-content: center;
+}
+
+.mission.row p {
+    margin-bottom: 0;
+}
+
+.mission.row .col-8 {
+    padding: 0;
+}
+
+.mission.row .col-2::after {
+    content: "";
+    position: absolute;
+    border-left: 4px dotted #3282b8;
+    z-index: 1;
+}
+
+.mission.row .col-2.bottom::after {
+    height: 50%;
+    left: 50%;
+    top: 50%;
+}
+
+.mission.row .col-2.full::after {
+    height: 100%;
+    left: calc(50% - 3px);
+}
+
+.mission.row .col-2.top::after {
+    height: 50%;
+    left: 50%;
+    top: 0;
+}
+
+.timeline div {
+    padding: 0;
+    height: 40px;
+}
+
+.timeline hr {
+    border-top: 4px dotted #3282b8;
+    margin: 0;
+    top: 17px;
+    position: relative;
+}
+
+.timeline .col-2 {
+    display: flex;
+    overflow: hidden;
+}
+
+.timeline .corner {
+    border: 4px dotted #3282b8;
+    width: 100%;
+    position: relative;
+    border-radius: 15px;
+}
+
+.timeline .top-right {
+    left: 50%;
+    top: -50%;
+}
+
+.timeline .left-bottom {
+    left: -50%;
+    top: calc(50% - 3px);
+}
+
+.timeline .top-left {
+    left: -50%;
+    top: -50%;
+}
+
+.timeline .right-bottom {
+    left: 50%;
+    top: calc(50% - 3px);
+}
