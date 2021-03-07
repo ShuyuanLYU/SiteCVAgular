@@ -2,7 +2,7 @@
     <h1 class="fontTitle">Expériences professionelles <br> & projets réalisés</h1>
     <div class="experience">
         <!-- <h2>Alternence Master 2</h2> -->
-        <h4>12/2019 - 09/2020<br>Alternance Master 2 - Informatique décisionnelle (BI) - GEODIS RT</h4>
+        <h4>12/2019 - 09/2020 : Alternance Master 2 - Informatique décisionnelle (BI) - GEODIS RT</h4>
         <div class="techList">
             <span class="tech">Talend</span>
             <span class="tech">Cognos</span>
@@ -28,7 +28,7 @@
     </div>
     <div class="experience">
         <!-- <h2>Stage Master 1</h2> -->
-        <h4>05/2019 - 08/2020<br>Stage Master 1 - HuaYi Technologie</h4>
+        <h4>05/2019 - 08/2020 : Stage Master 1 - HuaYi Technologie</h4>
         <div class="techList">
             <span class="tech">Node.js</span>
             <span class="tech">HTML</span>
@@ -40,13 +40,14 @@
         <p>Conception et réalisation d’un site web pour présenter l’entreprise et ses produits. Puis déploiement sur serveur.</p>
 
         <div *ngIf="ifDisplayStageM1">
+            <hr>
             <app-timeline-stage-m1></app-timeline-stage-m1>
 
         </div>
         <button class="btn btn-outline-info btn-sm" (click)="displayStageM1()">{{buttonDisplayStageM1}}</button>
     </div>
     <div class="experience">
-        <h4>09-2018 - 04/2019<br>Projet tutoré Master 1</h4>
+        <h4>09-2018 - 04/2019 : Projet tutoré Master 1</h4>
         <div class="techList">
             <span class="tech">JavaScript</span>
             <span class="tech">Node.js</span>
@@ -59,6 +60,7 @@
         </div>
         <p>Réalisation d’un site Web pour gérer le transport de colis par des voyageurs.</p>
         <div *ngIf="ifDisplayProjetTuto">
+            <hr>
             <app-timeline-projet-tutore></app-timeline-projet-tutore>
 
         </div>
