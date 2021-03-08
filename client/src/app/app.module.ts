@@ -22,6 +22,7 @@ import { ProfessionalExperienceComponent } from './professional-experience/profe
 import { TimelineAlternanceM2Component } from './timeline-alternance-m2/timeline-alternance-m2.component';
 import { TimelineStageM1Component } from './timeline-stage-m1/timeline-stage-m1.component';
 import { TimelineProjetTutoreComponent } from './timeline-projet-tutore/timeline-projet-tutore.component';
+import { TestFormationComponent } from './test-formation/test-formation.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -48,7 +49,8 @@ const appRoutes: Routes = [
     ProfessionalExperienceComponent,
     TimelineAlternanceM2Component,
     TimelineStageM1Component,
-    TimelineProjetTutoreComponent
+    TimelineProjetTutoreComponent,
+    TestFormationComponent
   ],
   imports: [
     BrowserModule,
