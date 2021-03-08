@@ -1,69 +1,72 @@
-<div class="container mb-5" id="exp">
-    <h1 class="fontTitle">Expériences professionnelles <br> & projets réalisés</h1>
-    <div class="experience">
-        <!-- <h2>Alternence Master 2</h2> -->
-        <h4>12/2019 - 09/2020 : Alternance Master 2 - Informatique décisionnelle (BI) - GEODIS RT</h4>
-        <div class="techList">
-            <span class="tech">Talend</span>
-            <span class="tech">Cognos</span>
-            <span class="tech">DBVisualiser</span>
-            <span class="tech">DBDesigner</span>
-            <span class="tech">SQL</span>
-            <span class="tech">Java</span>
-            <span class="tech">ETL</span>
+<div class="pb-4 pt-2" id="exp">
+    <div class="container">
+        <h1 class="fontTitle mt-4">Expériences professionnelles <br> & projets réalisés</h1>
+        <div class="experience">
+            <!-- <h2>Alternence Master 2</h2> -->
+            <h4>12/2019 - 09/2020 : Alternance Master 2 - Informatique décisionnelle (BI) - GEODIS RT</h4>
+            <div class="techList">
+                <span class="tech">Talend</span>
+                <span class="tech">Cognos</span>
+                <span class="tech">DBVisualiser</span>
+                <span class="tech">DBDesigner</span>
+                <span class="tech">SQL</span>
+                <span class="tech">Java</span>
+                <span class="tech">ETL</span>
+            </div>
+            <p>Mission : <strong>Modélisation</strong> et <strong>intégration</strong> de grandes quantités de données avec des règles de gestion spécifiques. Réalisation d’une base de données décisionnelle. Puis <strong>restitution</strong> des données
+                dans des tableaux de bord utilisables par les chefs de projet et dirigeants de l'entreprise. Ces tableaux leur permettent d'avoir une vue globale afin de prendre la meilleur décison possible.</p>
+
+            <div *ngIf="ifDisplayAlternanceM2">
+
+                <hr>
+                <p>12/2019 - 03/2020 : 2 semaines en université / 2 semaines en entreprise
+                    <br> 03/2020 - 09/2020 : temps plein en entreprise</p>
+                <p>Missions : </p>
+                <app-timeline-alternance-m2></app-timeline-alternance-m2>
+
+            </div>
+            <button class="btn btn-outline-info btn-sm" (click)="displayAlternanceM2()">{{buttonDisplayAlternanceM2}}</button>
         </div>
-        <p>Mission : <strong>Modélisation</strong> et <strong>intégration</strong> de grandes quantités de données avec des règles de gestion spécifiques. Réalisation d’une base de données décisionnelle. Puis <strong>restitution</strong> des données dans
-            des tableaux de bord utilisables par les chefs de projet et dirigeants de l'entreprise. Ces tableaux leur permettent d'avoir une vue globale afin de prendre la meilleur décison possible.</p>
+        <div class="experience">
+            <!-- <h2>Stage Master 1</h2> -->
+            <h4>05/2019 - 08/2019 : Stage Master 1 - HuaYi Technologie</h4>
+            <div class="techList">
+                <span class="tech">Node.js</span>
+                <span class="tech">HTML</span>
+                <span class="tech">CSS</span>
+                <span class="tech">Bootstrap</span>
+                <span class="tech">Javascript</span>
+                <span class="tech">Nginx</span>
+            </div>
+            <p>Conception et réalisation d’un site web pour présenter l’entreprise et ses produits. Puis déploiement sur serveur. J'ai travaillé en autonomie sur ce projet et je l'ai réalisé du début à la fin.</p>
 
-        <div *ngIf="ifDisplayAlternanceM2">
+            <div *ngIf="ifDisplayStageM1">
+                <hr>
+                <app-timeline-stage-m1></app-timeline-stage-m1>
 
-            <hr>
-            <p>12/2019 - 03/2020 : 2 semaines en université / 2 semaines en entreprise
-                <br> 03/2020 - 09/2020 : temps plein en entreprise</p>
-            <p>Missions : </p>
-            <app-timeline-alternance-m2></app-timeline-alternance-m2>
-
+            </div>
+            <button class="btn btn-outline-info btn-sm" (click)="displayStageM1()">{{buttonDisplayStageM1}}</button>
         </div>
-        <button class="btn btn-outline-info btn-sm" (click)="displayAlternanceM2()">{{buttonDisplayAlternanceM2}}</button>
+        <div class="experience">
+            <h4>09/2018 - 04/2019 : Projet tutoré Master 1</h4>
+            <div class="techList">
+                <span class="tech">JavaScript</span>
+                <span class="tech">Node.js</span>
+                <span class="tech">Python</span>
+                <span class="tech">Tensorflow</span>
+                <span class="tech">Angular</span>
+                <span class="tech">GitLab</span>
+                <span class="tech">Méthode agile Scrum</span>
+                <span class="tech">Intellij IDEA</span>
+            </div>
+            <p>Réalisation d’un site web permettant de gérer un programme de reconnaissance d’objet à partir d’image par apprentissage.</p>
+            <div *ngIf="ifDisplayProjetTuto">
+                <hr>
+                <app-timeline-projet-tutore></app-timeline-projet-tutore>
+
+            </div>
+            <button class="btn btn-outline-info btn-sm" (click)="displayProjetTuto()">{{buttonDisplayProjetTuto}}</button>
+        </div>
     </div>
-    <div class="experience">
-        <!-- <h2>Stage Master 1</h2> -->
-        <h4>05/2019 - 08/2019 : Stage Master 1 - HuaYi Technologie</h4>
-        <div class="techList">
-            <span class="tech">Node.js</span>
-            <span class="tech">HTML</span>
-            <span class="tech">CSS</span>
-            <span class="tech">Bootstrap</span>
-            <span class="tech">Javascript</span>
-            <span class="tech">Nginx</span>
-        </div>
-        <p>Conception et réalisation d’un site web pour présenter l’entreprise et ses produits. Puis déploiement sur serveur. J'ai travaillé en autonomie sur ce projet et je l'ai réalisé du début à la fin.</p>
 
-        <div *ngIf="ifDisplayStageM1">
-            <hr>
-            <app-timeline-stage-m1></app-timeline-stage-m1>
-
-        </div>
-        <button class="btn btn-outline-info btn-sm" (click)="displayStageM1()">{{buttonDisplayStageM1}}</button>
-    </div>
-    <div class="experience">
-        <h4>09/2018 - 04/2019 : Projet tutoré Master 1</h4>
-        <div class="techList">
-            <span class="tech">JavaScript</span>
-            <span class="tech">Node.js</span>
-            <span class="tech">Python</span>
-            <span class="tech">Tensorflow</span>
-            <span class="tech">Angular</span>
-            <span class="tech">GitLab</span>
-            <span class="tech">Méthode agile Scrum</span>
-            <span class="tech">Intellij IDEA</span>
-        </div>
-        <p>Réalisation d’un site web permettant de gérer un programme de reconnaissance d’objet à partir d’image par apprentissage.</p>
-        <div *ngIf="ifDisplayProjetTuto">
-            <hr>
-            <app-timeline-projet-tutore></app-timeline-projet-tutore>
-
-        </div>
-        <button class="btn btn-outline-info btn-sm" (click)="displayProjetTuto()">{{buttonDisplayProjetTuto}}</button>
-    </div>
 </div>

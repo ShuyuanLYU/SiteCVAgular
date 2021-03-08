@@ -2,33 +2,33 @@ import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html'/* ,
-  styleUrls: ['./nav-bar.component.css'] */
+  templateUrl: './nav-bar.component.html',
+  styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-  /* private prevScrollpos: number = window.pageYOffset;
-  isHidden = false;
-  fontColor = '#fafafa';
-  backgroundColor = 'transparent'; */
 
-  constructor() { }
+  private prevScrollpos: number = window.pageYOffset;
+  isHidden = false;
+  collapse = true;
+  public links: Link[];
+
+  constructor() {
+    this.links = [
+      new Link('banner', 'Accueil'),
+      new Link('aboutme', 'Profil'),
+      new Link('exp', 'Expériences'),
+      new Link('formation', 'Formation'),
+      new Link('contact', 'Me contacter')
+  ];
+   }
 
   ngOnInit(): void {
-    /* this.setIsHiddenNavBar();
-    this.setFontColor();
-    this.setBackgroundColor(); */
-  }
-
-  /* @HostListener('window:scroll', ['$event'])
-  onScroll(event): void {
-
     this.setIsHiddenNavBar();
-    this.setFontColor();
-    this.setBackgroundColor();
   }
 
-  private setFontColor(): void{
-    this.fontColor = window.pageYOffset > 100 ? '#333333' : '#fafafa';
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event): void {
+    this.setIsHiddenNavBar();
   }
 
   private setIsHiddenNavBar(): void{
@@ -36,8 +36,13 @@ export class NavBarComponent implements OnInit {
     this.prevScrollpos = window.pageYOffset;
   }
 
-  private setBackgroundColor(): void {
-    this.backgroundColor =  window.scrollY > 100 ? '#fafafa' : 'transparent';
-  } */
+}
+class Link {
+  public sectionId: string;
+  public label: string;
 
+  constructor(sectionId: string, label: string) {
+      this.sectionId = sectionId;
+      this.label = label;
+  }
 }
