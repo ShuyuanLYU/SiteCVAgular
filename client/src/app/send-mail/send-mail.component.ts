@@ -47,12 +47,12 @@ export class SendMailComponent implements OnInit {
           this.sending = false;
           this.isSend = true;
           this.mailForm.reset();
-          const numbers = interval(1000);
+          /* const numbers = interval(1000);
           const takeFourNumbers = numbers.pipe(take(10));
           takeFourNumbers.subscribe(x => this.second = 10 - x);
           setTimeout(() => {
             this.router.navigate(['/']);
-        }, 10000);  //10s 
+        }, 10000);  //10s  */
         }, err => {
           this.error = this.ERROR_SEND;
           console.log(err);

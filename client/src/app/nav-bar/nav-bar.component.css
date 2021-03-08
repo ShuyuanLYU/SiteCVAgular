@@ -1,6 +1,6 @@
 .navbar {
     padding: .8rem;
-    /* position: fixed; */
+    position: sticky;
     width: 100%;
     background-color: transparent;
     font-family: 'Kaushan Script', cursive;

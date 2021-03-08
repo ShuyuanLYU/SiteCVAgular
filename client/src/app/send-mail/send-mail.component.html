@@ -1,16 +1,17 @@
-<div class="container">
+<div class="pb-5 pt-3" id="contact">
+    <div class="container">
 
-    <h1 class="fontTitle mt-4">Contact</h1>
+        <h1 class="fontTitle mt-4">Contact</h1>
 
-    <div *ngIf="isSend">
-        <div class="alert alert-success mt-5" role="alert">
-            <h5 class="alert-heading">Votre message est bien envoyé !</h5>
-            <p>Je vous remercie de votre message. Vous recevrez également une copier dans votre email.</p>
-            <hr>
-            <p>Vous allez retourner vers la page d'accueil dans {{second}} seconds, ou <a href="/" class="alert-link">cliquer ici</a>.</p>
+        <div *ngIf="isSend">
+            <div class="alert alert-success mt-5" role="alert">
+                <h5 class="alert-heading">Votre message est bien envoyé !</h5>
+                <p>Je vous remercie de votre message. Vous recevrez également une copier dans votre email.</p>
+                <!-- <hr>
+            <p>Vous allez retourner vers la page d'accueil dans {{second}} seconds, ou <a href="/" class="alert-link">cliquer ici</a>.</p> -->
+            </div>
         </div>
-    </div>
-    
+
         <form class="form-group mt-3" [formGroup]="mailForm" (ngSubmit)="onSubmit()">
             <label>E-mail : <span class="red">*</span></label>
             <input class="form-control" type="mail" formControlName="mail">
@@ -23,18 +24,22 @@
             <label class="countNumlber"><span [class.red]="text.value.length > 1000" >{{1000 - text.value.length}}</span> / 1000</label>
             <textarea class="form-control mb-3" rows="5" formControlName="message" #text></textarea>
             <small class="text-muted"><span class="red">*</span> Champs obligatoires</small>
-            <div class="mb-4">
+
+            <div class="mb-4 pb-3">
                 <div *ngIf="error">
                     <div class="alert alert-danger mt-2" role="alert">
                         {{error}}
                     </div>
                 </div>
                 <button type="submit" class="btn btn-outline-secondary" [disabled]="sending">
-                    <div *ngIf="sending; else elseBlock"><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                        <span class="visually-hidden">Envoi en cours...</span></div>
-                    <ng-template #elseBlock>Envoyer</ng-template>                   
-                </button>
+                <div *ngIf="sending; else elseBlock">
+                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  <span class="visually-hidden">Envoi en cours...</span>
+                </div>
+                <ng-template #elseBlock>Envoyer</ng-template>
+            </button>
             </div>
         </form>
-    
+
+    </div>
 </div>
