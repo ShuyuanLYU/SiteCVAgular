@@ -1,0 +1,29 @@
+<div class="pb-4 pt-2 container">
+
+    <h1 class="fontTitle">CV</h1>
+    <p>Voici mon CV en format PDF !</p>
+
+    <pdf-viewer id="pdf-small" [src]="pdfSrc"
+    style="display: block;"
+    [render-text]="false"
+    [zoom]="0.7"
+    (click)="open(content)"
+    placement="bottom" ngbTooltip="Cliquer pour grandir"
+    [openDelay]="300" [closeDelay]="500"
+    >
+    </pdf-viewer>
+
+    <ng-template #content let-modal>
+        <div class="modal-body">
+            <pdf-viewer id="pdf-big" [src]="pdfSrc"
+            style="display: block;"
+            [render-text]="true"
+            >
+        </pdf-viewer>
+        </div>
+    </ng-template>
+
+    <button class="btn btn-outline-info btn-sm">Télécharger</button>
+    <hr class="mt-5">
+    
+</div>

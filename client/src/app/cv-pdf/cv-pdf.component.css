@@ -1,0 +1,28 @@
+#pdf-small {
+    height: 50vh;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+#pdf-small:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.model-body {
+    padding: 0 !important;
+}
+
+#pdf-big {
+    height: 80vh;
+    position: relative; 
+}
+
+p{
+    text-align: center;
+}
+
+button {
+    float: right;
+}

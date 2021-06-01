@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 
 import { AppComponent } from './app.component';
 import { BannerComponent } from './banner/banner.component';
@@ -22,6 +24,8 @@ import { ProfessionalExperienceComponent } from './professional-experience/profe
 import { TimelineAlternanceM2Component } from './timeline-alternance-m2/timeline-alternance-m2.component';
 import { TimelineStageM1Component } from './timeline-stage-m1/timeline-stage-m1.component';
 import { TimelineProjetTutoreComponent } from './timeline-projet-tutore/timeline-projet-tutore.component';
+import { CvPdfComponent } from './cv-pdf/cv-pdf.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -48,14 +52,17 @@ const appRoutes: Routes = [
     ProfessionalExperienceComponent,
     TimelineAlternanceM2Component,
     TimelineStageM1Component,
-    TimelineProjetTutoreComponent
+    TimelineProjetTutoreComponent,
+    CvPdfComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    PdfViewerModule,
+    NgbModule
   ],
   providers: [
     MailService,
