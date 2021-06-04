@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url('/assets/image/banner/background_0.jpg');
+    background-image: url('http://shuyuan-lyu.com/assets/image/banner/background_0.jpg');
     background-size: 150% contain;
     background-repeat: no-repeat;
     background-position: center;
