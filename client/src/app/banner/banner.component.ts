@@ -9,13 +9,13 @@ export class BannerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    /* this.setBannerBackground(); */
+    this.setBannerBackground();
   }
 
-  /* @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize', ['$event'])
   onResize(event): void {
     this.setBannerBackground();
-  } */
+  }
 
 
   /* @HostListener('window:scroll', ['$event'])
@@ -28,7 +28,7 @@ export class BannerComponent implements OnInit {
   /**
    * setBannerBackground
    */
-  /* public setBannerBackground(): void {
+  public setBannerBackground(): void {
     const banner: HTMLElement = document.getElementById('banner');
     banner.style.background = this.setBannerImg();
     banner.style.backgroundSize = '150% contain';
@@ -40,18 +40,24 @@ export class BannerComponent implements OnInit {
   private setBannerImg(): string {
     const widthToHeight = window.innerWidth / window.innerHeight;
     if (widthToHeight >= 10 / 8) {
-      return 'url(\'/assets/image/banner/background_0.jpg\')';
+      console.log("0");
+      return 'url("/assets/image/banner/background_0.jpg")';
     } else if (widthToHeight >= 1){
-        return 'url(\'/assets/image/banner/background_1.jpg\')';
+      console.log("1");
+      return 'url("/assets/image/banner/background_1.jpg")';
     }else if (widthToHeight >= 8 / 10){
-        return 'url(\'/assets/image/banner/background_2.jpg\')';
+      console.log("2");
+      return 'url("/assets/image/banner/background_2.jpg")';
     }else if (widthToHeight >= 5 / 7){
-        return 'url(\'/assets/image/banner/background_3.jpg\')';
+      console.log("3");
+      return 'url("/assets/image/banner/background_3.jpg")';
     }else if (widthToHeight >= 9 / 16){
-        return 'url(\'/assets/image/banner/background_4.jpg\')';
+      console.log("4");
+      return 'url("/assets/image/banner/background_4.jpg")';
     }else {
-      return 'url(\'/assets/image/banner/background_5.jpg\')';
+      console.log("5");
+      return 'url("/assets/image/banner/background_5.jpg")';
     }
-  } */
+  } 
 
 }
