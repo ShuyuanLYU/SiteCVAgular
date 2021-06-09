@@ -12,14 +12,14 @@
     justify-content: space-between;
     align-items: center;
     background-image: url('http://shuyuan-lyu.com/assets/image/banner/background_0.png');
-    background-size: 150% contain; 
+    background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    -o-background-size: 150% contain;
-    -moz-background-size: 150% contain;
-    -webkit-background-size: 150% contain;
-    -ms-background-size: 150% contain;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -ms-background-size: cover;
 }
 
 .banner h1 {
