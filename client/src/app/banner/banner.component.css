@@ -16,9 +16,9 @@
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
+    -o-background-size: 150% contain;
+    -moz-background-size: 150% contain;
+    -webkit-background-size: 150% contain;
 }
 
 .banner h1 {
