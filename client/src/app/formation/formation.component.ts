@@ -13,9 +13,9 @@ export class FormationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @HostListener('window:resize', ['$event'])
+  /* @HostListener('window:resize', ['$event'])
   onResize(event): void {
     console.log(event.target.innerWidth);
-  }
+  } */
 
 }
