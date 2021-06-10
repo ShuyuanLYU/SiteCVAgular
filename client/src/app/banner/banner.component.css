@@ -20,6 +20,8 @@
     -moz-background-size: 150% cover;
     -webkit-background-size: 150% cover;
     -ms-background-size: 150% cover;
+    background-position-x: 50%;
+    background-position-y: 0%;
 }
 
 .banner h1 {
