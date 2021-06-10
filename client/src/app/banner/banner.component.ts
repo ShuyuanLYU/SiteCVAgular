@@ -18,12 +18,12 @@ export class BannerComponent implements OnInit {
   }
 
 
-  @HostListener('window:scroll', ['$event'])
+/*   @HostListener('window:scroll', ['$event'])
   onScroll(event): void {
     const banner: HTMLElement = document.getElementById('banner');
     banner.style.backgroundSize = 150 - +window.pageYOffset / 15 + '%';
     banner.style.opacity = 1 - +window.pageYOffset / 700 + '';
-  } 
+  }  */
 
   /**
    * setBannerBackground
@@ -31,7 +31,7 @@ export class BannerComponent implements OnInit {
   public setBannerBackground(): void {
     const banner: HTMLElement = document.getElementById('banner');
     banner.style.background = this.setBannerImg();
-    banner.style.backgroundSize = '150% cover';
+    banner.style.backgroundSize = 'cover';
     banner.style.backgroundRepeat = 'no-repeat';
     banner.style.backgroundPosition = 'center';
     banner.style.backgroundAttachment = 'fixed';
