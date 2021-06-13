@@ -21,7 +21,7 @@ export class BannerComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
   onScroll(event): void {
     const banner: HTMLElement = document.getElementById('banner');
-    banner.style.backgroundSize = 150 - +window.pageYOffset / 15 + '%';
+    /* banner.style.backgroundSize = 150 - +window.pageYOffset / 15 + '%'; */
     banner.style.opacity = 1 - +window.pageYOffset / 700 + '';
   }
 
