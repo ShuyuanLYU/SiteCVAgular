@@ -44,3 +44,25 @@
     color: #FFF;
     font-weight: 500;
 }
+#banner{
+    position: relative;
+}
+#banner_image {
+    height: 100vh;
+}
+#banner_text{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    text-shadow: 2px 2px 5px #706c61;
+}
+#banner_text h1 {
+    color: #FFF;
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+#banner_text span {
+    font-size: 1.5em;
+    font-weight: 700;
+}
