@@ -1,4 +1,4 @@
-.section {
+/* .section {
     padding: 100px;
 }
 
@@ -30,7 +30,6 @@
 }
 
 .textBx text {
-    /* transform: translateY(100%); */
     display: inline-block;
 }
 
@@ -43,12 +42,14 @@
     font-size: 1.5em;
     color: #FFF;
     font-weight: 500;
-}
+} */
 #banner{
     position: relative;
 }
 #banner_image {
+    width: 100%;
     height: 100vh;
+    object-fit: cover;
 }
 #banner_text{
     position: absolute;

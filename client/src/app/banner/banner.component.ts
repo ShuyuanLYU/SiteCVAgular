@@ -6,15 +6,20 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
+
+  bannerImageSrc;
+
   constructor() { }
 
   ngOnInit(): void {
-    this.setBannerBackground();
+    this.bannerImageSrc = this.setBannerImageSrc();
+    /* this.setBannerBackground(); */
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event): void {
-    this.setBannerBackground();
+    this.bannerImageSrc = this.setBannerImageSrc();
+    /* this.setBannerBackground(); */
   }
 
 
@@ -51,6 +56,24 @@ export class BannerComponent implements OnInit {
       return 'url("/assets/image/banner/background_4.jpg")';
     }else {
       return 'url("/assets/image/banner/background_5.jpg")';
+    }
+  } 
+
+  
+  private setBannerImageSrc(): string {
+    const widthToHeight = window.innerWidth / window.innerHeight;
+    if (widthToHeight >= 10 / 8) {
+      return "/assets/image/banner/background_0.jpg";
+    } else if (widthToHeight >= 1){
+      return "/assets/image/banner/background_1.jpg";
+    }else if (widthToHeight >= 8 / 10){
+      return "/assets/image/banner/background_2.jpg";
+    }else if (widthToHeight >= 5 / 7){
+      return "/assets/image/banner/background_3.jpg";
+    }else if (widthToHeight >= 9 / 16){
+      return "/assets/image/banner/background_4.jpg";
+    }else {
+      return "/assets/image/banner/background_5.jpg";
     }
   } 
 
